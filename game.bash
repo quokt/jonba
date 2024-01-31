@@ -13,11 +13,11 @@ current_index="start"
 ######### Functions #########
 
 say() {
-	spd-say $1
+	spd-say "$*" -r -100 -l fr -w
 }
 
 #get current content description from JSON
-get_content() { 
+get_content() {
 	jshon -F $content_path$content_file_name -e $current_index
 }
 
@@ -33,8 +33,9 @@ while $game_on ; do
 
 	#echo $current_index
 	get_content | jshon -e display_name
-	spd-say `get_content | jshon -e display_name`
+	say `get_content | jshon -e display_name`
 	get_content | jshon -e text
+	say `get_content | jshon -e text`
 
 	read -p ">>>>>>>" input _trash
 	#get_target $input
@@ -45,5 +46,5 @@ while $game_on ; do
 
 
 	#echo $current_index
-	
+
 done
