@@ -18,12 +18,12 @@ say() {
 
 #get current content description from JSON
 get_content() {
-	jshon -F $content_path$content_file_name -e $current_index
+	jshon -C -Q -F $content_path$content_file_name -e $current_index
 }
 
 #get target index from input
 get_target() {
-	get_content | jshon -e inputs -e $1 -u |  cat
+	get_content | jshon -C -Q -e inputs -e $1 -u |  cat
 }
 
 
@@ -32,10 +32,10 @@ get_target() {
 while $game_on ; do
 
 	#echo $current_index
-	get_content | jshon -e display_name
-	say `get_content | jshon -e display_name`
-	get_content | jshon -e text
-	say `get_content | jshon -e text`
+	get_content | jshon -C -Q -e display_name
+	say `get_content | jshon -C -Q -e display_name`
+	get_content | jshon -C -Q -e text
+	say `get_content | jshon -C -Q -e text`
 
 	read -p ">>>>>>>" input _trash
 	#get_target $input
