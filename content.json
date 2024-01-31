@@ -1,0 +1,25 @@
+
+{
+	"start": {
+		"id" : "0",
+		"name" : "start",
+		"display_name" : "No idea",
+		"type" : "situation",
+		"text" : "Quosque tandem abutere, Catilina, patientia nostre?",
+		"inputs" : {
+			"Bonjour" : "start",
+			"test" : "test"
+		}
+	},
+	"test": {
+		"id" : "1",
+		"name" : "test",
+		"display_name" : "Ceci est un test",
+		"type" : "situation",
+		"text" : "Ceci est juste un test et n'a aucune importance comme ta misérable existence",
+		"inputs" : {
+			"bonjour" : "start",
+			"test" : "test"
+		}
+	}
+}
