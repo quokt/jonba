@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#requires : jshon , spd-say
+
 ######## Global Variables ########
 
 game_on=true
@@ -9,11 +11,13 @@ content_file_name="content.json"
 
 current_index="start"
 
+null_count=0
+
 
 ######### Functions #########
 
 say() {
-	spd-say "$*" -r -100 -l fr -w
+	spd-say "$*" -r -100 -l la #-w
 }
 
 #get current content description from JSON
@@ -36,34 +40,28 @@ read_and_display() {
 
 while $game_on ; do
 
-	#echo $current_index
-	#get_content | jshon -C -Q -e display_name
-	#say `get_content | jshon -C -Q -e display_name`
-	#get_content | jshon -C -Q -e text
-	#say `get_content | jshon -C -Q -e text`
-
 	read_and_display display_name
 	read_and_display text
 
 	read -p ">>>>>>>" input _trash
-	#get_target $input
 	target=`get_target "$input"`
 
-	#echo $target
+	case $input in
+	"exit" | "quit" | !?q? | !q? | !?q ) game_on=false;;
+	"esc" ) cat $content_path/game.bash | spd-say -e -w;;
+	#*) echo "test"
+	esac
 
-	if [ "$input" = "exit" ]; then
-                game_on=false
-        fi
+#	if [ "$input" = "exit" ]; then
+ #               game_on=false
+  #      fi
 
 	if [ "$target" = "null" ]; then
 		echo "target is null!"
 		#game_on=false
+		#null_count= $(($null_count + "1"))
+		#echo $null_count
 	else
 		current_index=$target
 	fi
-
-
-
-	#echo $current_index
-
 done
