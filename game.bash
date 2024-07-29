@@ -6,7 +6,7 @@
 
 game_on=true
 
-content_path="$HOME/Game/"
+content_path="$HOME/jonba/"
 content_file_name="content.json"
 
 current_index="start"
@@ -30,6 +30,10 @@ get_target() {
 	get_content | jshon -C -Q -e inputs -e "$1" -u |  cat
 }
 
+get_actions() {
+	get_content | jshon -C -Q -e inputs | jshon -C -Q -k | cat
+}
+
 #read and display the json field passed as argument
 read_and_display() {
 	get_content | jshon -C -Q -e "$1"
@@ -43,6 +47,8 @@ while $game_on ; do
 	read_and_display display_name
 	read_and_display text
 
+	declare -A actions=`get_actions`
+	echo ${actions}
 	read -p ">>>>>>>" input _trash
 	target=`get_target "$input"`
 
