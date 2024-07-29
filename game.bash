@@ -47,13 +47,14 @@ while $game_on ; do
 	read_and_display display_name
 	read_and_display text
 
+	echo "########################"
 	declare -A actions=`get_actions`
 	echo ${actions}
 	read -p ">>>>>>>" input _trash
 	target=`get_target "$input"`
 
 	case $input in
-	"exit" | "quit" | !?q? | !q? | !?q ) game_on=false;;
+	"exit" | "quit" | :?q? | :q? | :?q ) game_on=false;;
 	"esc" ) cat $content_path/game.bash | spd-say -e -w;;
 	#*) echo "test"
 	esac
