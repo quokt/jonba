@@ -22,7 +22,7 @@ say() {
 
 #get current content description from JSON
 get_content() {
-	jshon -C -Q -F $content_path$content_file_name -e $current_index | fold -s -w 30
+	jshon -C -Q -F $content_path$content_file_name -e $current_index
 }
 
 #get target index from input
@@ -39,7 +39,7 @@ get_and_display_actions() {
 
 #read and display the json field passed as argument
 read_and_display() {
-	get_content | jshon -C -Q -e "$1"
+	get_content | jshon -C -Q -e "$1" | fold -s -w 30
 	say `get_content | jshon -C -Q -e "$1"`
 }
 
