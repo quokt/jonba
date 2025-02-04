@@ -383,7 +383,7 @@
         "text": "Vous décidez d'explorer davantage l'herbe. En vous enfonçant plus profondément, vous découvrez un ancien portail couvert de lianes. Il semble pulsé d'une énergie mystérieuse. Que ferez-vous ?",
         "inputs": {
             "Entrer dans le portail": "fin_portail",
-            "Faire demi-tour": "retour_champ",
+            "Faire demi-tour": "retour_champ"
         }
     },
 
