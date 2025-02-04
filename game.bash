@@ -6,6 +6,9 @@
 
 game_on=true
 
+max_char_per_text_line=66
+language="fr"
+
 content_path="$HOME/jonba/"
 content_file_name="content.json"
 
@@ -17,7 +20,7 @@ null_count=0
 ######### Functions #########
 
 say() {
-	spd-say "$*" -r -100 -l fr -w
+	spd-say "$*" -r -100 -l $language -w
 }
 
 #get current content description from JSON
@@ -39,7 +42,7 @@ get_and_display_actions() {
 
 #read and display the json field passed as argument
 read_and_display() {
-	get_content | jshon -C -Q -e "$1" | fold -s -w 30
+	get_content | jshon -C -Q -e "$1" | fold -s -w $max_char_per_text_line
 	say `get_content | jshon -C -Q -e "$1"`
 }
 
