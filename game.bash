@@ -55,7 +55,8 @@ while $game_on ; do
 
 	echo "########################"
 	get_and_display_actions
-	read -r -p ">>>>>>>" input
+ 	echo "########################"
+	read -r -p ">>>>>>> " input
 	target=$(get_target "$input")
 
 	case $input in
