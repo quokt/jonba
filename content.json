@@ -1,4 +1,4 @@
-{
+ d{
         "start": {
                 "id": "0",
                 "name": "start",
@@ -88,7 +88,7 @@
                 "text": "Vous rassemblez votre courage et parlez aux figures. Elles répondent à l'unisson, vous avertissant des dangers qui vous attendent. Elles vous proposent un choix : prouver votre valeur en accomplissant une tâche ou ignorer leurs conseils.",
                 "inputs": {
                         "Accepter la tâche": "accepter_tache",
-                        "Les ignorer": "continuer_marche"
+                        "Les ignorer": "suivre_chemin"
                 }
         },
         "sortir": {
@@ -96,10 +96,10 @@
                 "name": "sortir",
                 "display_name": "Sortir du Trou",
                 "type": "situation",
-                "text": "Vous parvenez à sortir du trou, mais vous vous sentez désorienté. L'herbe autour de vous semble murmurer des secrets. Voulez-vous écouter attentivement ou vous éloigner ?",
+                "text": "Vous parvenez à sortir du trou, mais vous vous sentez désorienté. L'herbe autour de vous semble murmurer des secrets, et de grandes figures vous observent au dessus des herbes. Voulez-vous écouter attentivement ou parler aux figures ?",
                 "inputs": {
                         "Écouter attentivement": "ecouter_murmures",
-                        "S'éloigner": "continuer_marche"
+                        "Parler aux figures": "parler_figures"
                 }
         },
         "rester_immobile": {
@@ -121,7 +121,7 @@
                 "text": "En examinant l'autel, vous remarquez des gravures étranges racontant l'histoire d'un héros qui a autrefois traversé cette terre. Vous ressentez une connexion avec le passé. Voulez-vous effectuer un rituel ou quitter l'autel ?",
                 "inputs": {
                         "Effectuer un rituel": "effectuer_rituel",
-                        "Quitter l'autel": "continuer_marche"
+                        "Quitter l'autel": "fin"
                 }
         },
         "prendre_boussole": {
@@ -143,7 +143,7 @@
                 "text": "Les figures vous confient une tâche : retrouver le cœur de l'herbe, une source de pouvoir cachée. Elles vous avertissent que le chemin sera semé d'embûches. Êtes-vous prêt à commencer cette quête ?",
                 "inputs": {
                         "OUI, je suis prêt !": "debut_quete",
-                        "NON, je préfère partir": "continuer_marche"
+                        "NON, je préfère partir": "fin"
                 }
         },
         "ecouter_murmures": {
