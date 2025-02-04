@@ -436,7 +436,7 @@
     "fin_oiseau": {
         "id": "41",
         "name": "fin_oiseau",
-        "display_name": "Fin de l'Oiseau",
+        "display_name": "!",
         "type": "fin",
         "text": "Vous décidez d'écouter l'oiseau qui chante une mélodie envoûtante. En le suivant, vous découvrez un jardin secret rempli de merveilles. Vous réalisez que vous êtes devenu le gardien de ce jardin magique, où chaque jour est une nouvelle aventure.",
         "inputs": {
@@ -446,7 +446,7 @@
     "fin_lapin_foudre": {
         "id": "42",
         "name": "fin_lapin_foudre",
-        "display_name": "Fin du Lapin Foudre",
+        "display_name": "!",
         "type": "fin",
         "text": "L'orage éclate. Vous cherchez un abri, mais un éclair frappe un arbre à proximité. Les lapins, effrayés, s'enfuient, et vous vous retrouvez seul. Vous réalisez que parfois, même les jeux les plus amusants peuvent avoir des conséquences inattendues.",
         "inputs": {
@@ -456,7 +456,7 @@
  "fin_piege": {
         "id": "43",
         "name": "fin_piege",
-        "display_name": "Fin du Piège",
+        "display_name": "!",
         "type": "fin",
         "text": "Vous restez bloqué dans le piège. Vous vous retrouvez dans un monde où le temps s'écoule différemment. Vous réalisez que vous devrez résoudre beaucoup d'énigmes pour retrouver votre chemin. Peut-être que la prochaine fois, vous serez plus prudent !",
         "inputs": {
@@ -466,7 +466,7 @@
     "fin_chanson": {
         "id": "44",
         "name": "fin_chanson",
-        "display_name": "Fin de la Chanson",
+        "display_name": "!",
         "type": "fin",
         "text": "Vous avez décidé d'écouter les chansons des lapins. Leur mélodie vous transporte dans un rêve doux et paisible. Vous vous endormez en écoutant leurs histoires, et lorsque vous vous réveillez, vous êtes dans un endroit magnifique, entouré de fleurs et de rires. Vous avez découvert la magie de la musique.",
         "inputs": {
@@ -476,7 +476,7 @@
     "fin_portail": {
         "id": "45",
         "name": "fin_portail",
-        "display_name": "Fin du Portail",
+        "display_name": "!",
         "type": "fin",
         "text": "En entrant dans le portail, vous êtes transporté dans un monde fantastique rempli de créatures merveilleuses et de paysages enchanteurs. Vous réalisez que vous avez trouvé un nouveau foyer, un endroit où l'aventure ne s'arrête jamais. Vous êtes maintenant un explorateur de ce monde magique, pour l'éternité.",
         "inputs": {
@@ -486,7 +486,7 @@
     "fin_jeu_fleurs": {
         "id": "46",
         "name": "fin_jeu_fleurs",
-        "display_name": "Fin du Jeu des Fleurs",
+        "display_name": "!",
         "type": "fin",
         "text": "Vous avez décidé de continuer à jouer avec les fleurs, et à votre grande surprise, vous gagnez le jeu ! Les fleurs vous couronnent comme leur champion et vous offrent un cadeau magique : la capacité de parler aux plantes. Vous réalisez que chaque jour peut être une nouvelle aventure remplie de magie.",
         "inputs": {
@@ -497,7 +497,7 @@
         "fin": {
                 "id": "100",
                 "name": "fin",
-                "display_name": "Fin",
+                "display_name": "!",
                 "type": "fin",
                 "text": "Vous décidez de faire demi-tour et de quitter cette aventure. En sortant, vous réalisez que vous avez oublié votre sandwich au fromage dans le champ. Vous vous retournez, mais l'herbe semble rire de vous. Peut-être que la prochaine fois, vous prendrez un en-cas plus léger !",
                 "inputs": {
@@ -507,7 +507,7 @@
         "fin_herbe": {
                 "id": "101",
                 "name": "fin_herbe",
-                "display_name": "Fin de l'Herbe",
+                "display_name": "!",
                 "type": "fin",
                 "text": "Vous avez décidé de suivre le chemin et de découvrir le cœur de l'herbe. En arrivant, vous trouvez un énorme cœur en guimauve ! Vous réalisez que l'herbe n'était pas si terrible après tout. Vous vous asseyez et commencez à le manger, mais vous êtes bientôt attaqué par des lapins en colère qui veulent leur part. Qui aurait cru que l'herbe pouvait être si douce et si dangereuse ?",
                 "inputs": {
@@ -517,7 +517,7 @@
         "fin_rire": {
                 "id": "102",
                 "name": "fin_rire",
-                "display_name": "Fin du Rire",
+                "display_name": "!",
                 "type": "fin",
                 "text": "Vous avez décidé de danser avec les fleurs. Elles vous entraînent dans une danse folle, et vous vous retrouvez à chanter des chansons sur les légumes. Les figures d'herbe se mettent à rire si fort qu'elles se transforment en nuages de paillettes. Vous réalisez que vous êtes devenu le roi des fleurs et que vous devez maintenant gouverner un royaume de légumes dansants. Qui aurait cru que l'aventure serait si... colorée ?",
                 "inputs": {
@@ -527,7 +527,7 @@
         "fin_rituel": {
                 "id": "103",
                 "name": "fin_rituel",
-                "display_name": "Fin du Rituel",
+                "display_name": "!",
                 "type": "fin",
                 "text": "Vous avez décidé d'effectuer un rituel à l'autel. En chantant des incantations étranges, vous invoquez un esprit de l'herbe qui apparaît sous la forme d'un chat géant. Le chat vous regarde et dit : 'Tu as réveillé mon sommeil, maintenant je vais te donner un conseil : ne jamais sous-estimer le pouvoir d'une sieste !' Puis il s'endort à nouveau. Vous vous demandez si vous avez vraiment besoin de cette aventure après tout.",
                 "inputs": {
@@ -537,7 +537,7 @@
         "fin_boussole": {
                 "id": "104",
                 "name": "fin_boussole",
-                "display_name": "Fin de la Boussole",
+                "display_name": "!",
                 "type": "fin",
                 "text": "Vous avez pris la boussole et décidé de suivre le chemin qu'elle indique. Après une longue marche, vous arrivez à un panneau indiquant 'Retour à la case départ'. Vous réalisez que la boussole était en fait un gadget de jeu de société. Vous vous asseyez, sortez un jeu de société et commencez à jouer avec les figures d'herbe. Qui aurait cru que l'aventure se terminerait par une soirée jeux ?",
                 "inputs": {
