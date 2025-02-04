@@ -244,6 +244,149 @@
                         "Jouer le jeu": "fin_herbe"
                 }
         },
+	"effectuer_rituel": {
+	        "id": "22",
+	        "name": "effectuer_rituel",
+	        "display_name": "Effectuer le Rituel",
+	        "type": "situation",
+	        "text": "Vous vous concentrez et commencez à chanter des incantations anciennes. L'air autour de vous se charge d'énergie, et une lumière éclatante émane de l'autel. Soudain, un esprit de l'herbe apparaît, vous offrant un choix : utiliser ce pouvoir pour avancer dans votre quête ou le garder pour vous.",
+	        "inputs": {
+	            "Utiliser le pouvoir": "utiliser_pouvoir",
+	            "Garder le pouvoir": "garder_pouvoir"
+	        }
+	    },
+	"naviguer_connaissance": {
+	        "id": "23",
+	        "name": "naviguer_connaissance",
+	        "display_name": "Naviguer avec la Connaissance",
+	        "type": "situation",
+	        "text": "Fort de votre nouvelle connaissance, vous commencez à naviguer à travers l'herbe. Les murmures vous guident, et vous évitez habilement les pièges cachés. Vous arrivez à un carrefour où plusieurs chemins s'offrent à vous. Quel chemin choisirez-vous ?",
+	        "inputs": {
+	            "Prendre le chemin de gauche": "chemin_gauche",
+	            "Prendre le chemin de droite": "chemin_droite",
+	            "Continuer tout droit": "chemin_droit"
+	        }
+	    },
+	"danser_fleurs": {
+	        "id": "24",
+	        "name": "danser_fleurs",
+	        "display_name": "Danser avec les Fleurs",
+	        "type": "situation",
+	        "text": "Vous vous laissez emporter par la musique des fleurs et commencez à danser. Les fleurs s'animent autour de vous, formant un cercle joyeux. Vous ressentez une connexion profonde avec la nature. Que ferez-vous ensuite ?",
+	        "inputs": {
+	            "Inviter d'autres à danser": "inviter_danser",
+	            "Continuer à danser seul": "danser_seul"
+	        }
+	    },
+	"utiliser_pouvoir": {
+	        "id": "25",
+	        "name": "utiliser_pouvoir",
+	        "display_name": "Utiliser le Pouvoir",
+	        "type": "situation",
+	        "text": "Vous décidez d'utiliser le pouvoir de l'esprit pour avancer dans votre quête. Une vague d'énergie vous traverse, et vous vous sentez invincible. Vous pouvez maintenant surmonter tous les obstacles. Que ferez-vous ?",
+	        "inputs": {
+	            "Affronter les figures": "affronter_figures",
+	            "Explorer davantage": "explorer_davantage"
+	        }
+	    },
+	"garder_pouvoir": {
+	        "id": "26",
+	        "name": "garder_pouvoir",
+	        "display_name": "Garder le Pouvoir",
+	        "type": "situation",
+	        "text": "Vous choisissez de garder le pouvoir pour vous. L'esprit vous regarde avec un mélange de tristesse et de compréhension. Vous sentez que ce choix aura des conséquences. Que ferez-vous ensuite ?",
+	        "inputs": {
+	            "Revenir à l'autel": "examiner_autel",
+	            "Explorer l'herbe": "champ_herbe"
+	        }
+	    },
+	"chemin_gauche": {
+	        "id": "27",
+	        "name": "chemin_gauche",
+	        "display_name": "Chemin de Gauche",
+	        "type": "situation",
+	        "text": "Vous empruntez le chemin de gauche, qui est bordé de fleurs éclatantes. Soudain, vous tombez sur un groupe de créatures qui semblent avoir besoin d'aide. Que ferez-vous ?",
+	        "inputs": {
+	            "Offrir votre aide": "aider_creatures",
+	            "Ignorer et continuer": "champ_herbe"
+	        }
+	    },
+	"chemin_droite": {
+	        "id": "28",
+	        "name": "chemin_droite",
+	        "display_name": "Chemin de Droite",
+	        "type": "situation",
+	        "text": "Vous choisissez le chemin de droite, qui semble plus sombre et mystérieux. Vous entendez des murmures étranges et sentez une présence. Que ferez-vous ?",
+	        "inputs": {
+	            "Explorer la source des murmures": "explorer_murmures",
+	            "Continuer toujours plus loin": "fin_herbe"
+		}
+	},
+	 "inviter_danser": {
+        "id": "29",
+        "name": "inviter_danser",
+        "display_name": "Inviter d'autres à Danser",
+        "type": "situation",
+        "text": "Vous invitez d'autres créatures à se joindre à vous dans la danse. Ensemble, vous formez un cercle joyeux, et la magie de la danse vous transporte dans un monde de couleurs et de rires. Vous réalisez que vous êtes devenu le roi des fleurs !",
+        "inputs": {
+            "Recommencer l'aventure": "fin_rire"
+        }
+    },
+    "danser_seul": {
+        "id": "30",
+        "name": "danser_seul",
+        "display_name": "Continuer à Danser Seul",
+        "type": "situation",
+        "text": "Vous continuez à danser seul, mais la magie commence à s'estomper. Les fleurs se fanent lentement, et vous vous retrouvez seul dans le champ. Vous réalisez que la solitude peut être pesante.",
+        "inputs": {
+            "Recommencer l'aventure": "start"
+        }
+    },
+    "aider_creatures": {
+        "id": "31",
+        "name": "aider_creatures",
+        "display_name": "Aider les Créatures",
+        "type": "situation",
+        "text": "Vous décidez d'offrir votre aide aux créatures. Elles vous remercient et vous révèlent un secret : un chemin caché vers le cœur de l'herbe. Vous êtes maintenant prêt à poursuivre votre quête.",
+        "inputs": {
+            "Suivre le chemin caché": "chemin_cache"
+        }
+    },
+    "explorer_murmures": {
+        "id": "32",
+        "name": "explorer_murmures",
+        "display_name": "Explorer la Source des Murmures",
+        "type": "situation",
+        "text": "Vous vous approchez de la source des murmures et découvrez un groupe de lapins qui chantent des chansons anciennes. Ils vous invitent à les rejoindre, mais vous devez choisir : danser ou écouter.",
+        "inputs": {
+            "Danser avec les lapins": "fin_rire",
+            "Écouter les chansons": "fin_boussole"
+        }
+    },
+    "champ_herbe": {
+        "id": "33",
+        "name": "champ_herbe",
+        "display_name": "Retour au Champ",
+        "type": "situation",
+        "text": "Vous retournez au champ, mais l'herbe semble plus dense et plus sombre. Vous sentez une présence étrange. Que ferez-vous ?",
+        "inputs": {
+            "Explorer davantage": "fin_herbe",
+            "Faire demi-tour": "fin"
+        }
+    },
+"explorer_davantage": {
+        "id": "35",
+        "name": "explorer_davantage",
+        "display_name": "Explorer Davantage",
+        "type": "situation",
+        "text": "Vous décidez d'explorer davantage l'herbe. En vous enfonçant plus profondément, vous découvrez un ancien portail couvert de lianes. Il semble pulsé d'une énergie mystérieuse. Que ferez-vous ?",
+        "inputs": {
+            "Entrer dans le portail": "fin_rituel",
+            "Faire demi-tour": "fin"
+        }
+    },
+	
+
         "fin": {
                 "id": "100",
                 "name": "fin",
