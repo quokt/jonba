@@ -208,7 +208,7 @@
                 "text": "Vous tentez d'attraper l'oiseau, mais il s'envole juste au-dessus de vous. En tombant, vous atterrissez sur un coussin de fleurs. Les fleurs commencent à chanter et vous entraînent dans une danse. Que ferez-vous ?",
                 "inputs": {
                         "Danser avec les fleurs": "danser_fleurs",
-                        "Essayer de vous relever": "champ_herbe"
+                        "Essayer de vous relever": "fin_piege"
                 }
         },
         "observer_oiseau": {
@@ -284,7 +284,7 @@
 	        "type": "situation",
 	        "text": "Vous décidez d'utiliser le pouvoir de l'esprit pour avancer dans votre quête. Une vague d'énergie vous traverse, et vous vous sentez invincible. Vous pouvez maintenant surmonter tous les obstacles. Que ferez-vous ?",
 	        "inputs": {
-	            "Affronter les figures": "affronter_figures",
+	            "Affronter les figures": "fin_lapin_foudre",
 	            "Explorer davantage": "explorer_davantage"
 	        }
 	    },
