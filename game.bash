@@ -17,7 +17,7 @@ null_count=0
 ######### Functions #########
 
 say() {
-	spd-say "$*" -r -100 -l la #-w
+	spd-say "$*" -r -100 -l fr -w
 }
 
 #get current content description from JSON
@@ -49,9 +49,9 @@ while $game_on ; do
 
 	echo "########################"
 	declare -A actions=`get_actions`
-	echo ${actions}
-	read -p ">>>>>>>" input _trash
-	target=`get_target "$input"`
+	echo ${actions[@]}
+	read -p ">>>>>>>" input
+	target=$(get_target "$input")
 
 	case $input in
 	"exit" | "quit" | :?q? | :q? | :?q ) game_on=false;;
