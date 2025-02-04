@@ -32,7 +32,7 @@
                 "inputs": {
                         "Suivre le chemin": "suivre_chemin",
                         "Enquêter sur l'objet brillant": "objet_bright",
-                        "Faire demi-tour": "start"
+                        "Faire demi-tour": "fin"
                 }
         },
         "enqueter_formes": {
@@ -153,7 +153,7 @@
                 "text": "Vous écoutez attentivement les murmures, et ils révèlent des secrets sur l'herbe et ses dangers cachés. Vous gagnez un aperçu des chemins à venir. Voulez-vous utiliser cette connaissance pour naviguer ou l'ignorer ?",
                 "inputs": {
                         "Utiliser la connaissance": "naviguer_connaissance",
-                        "Les ignorer": "champ_herbe"
+                        "Les ignorer": "debut_quete"
                 }
         },
 	"chemin_cache" : {
@@ -163,7 +163,7 @@
 		"type": "situation",
 		"text": "Le chemin que vous suivez se perd dans les vagues de la mer d'herbe. Les formes vous appelent... Voulez vous plonger dans son immensité? ",
 		"inputs": {
-			"Suivre le Chemin":"fin_herbe",
+			"Suivre le Chemin":"fin_boussole",
 			"Enquêter sur les Formes":"enqueter_formes"
 		}
 	},
@@ -219,7 +219,7 @@
                 "text": "Vous décidez d'observer l'oiseau. Il se perche sur une branche et commence à chanter une mélodie envoûtante. Vous êtes tellement captivé que vous ne remarquez pas un groupe de lapins qui s'approche. Que ferez-vous ?",
                 "inputs": {
                         "Interagir avec les lapins": "interagir_lapins",
-                        "Continuer à écouter l'oiseau": "fin_rire"
+                        "Continuer à écouter l'oiseau": "fin_oiseau"
                 }
         },
         "rejoindre_creatures": {
@@ -263,8 +263,7 @@
 	        "text": "Fort de votre nouvelle connaissance, vous commencez à naviguer à travers l'herbe. Les murmures vous guident, et vous évitez habilement les pièges cachés. Vous arrivez à un carrefour où plusieurs chemins s'offrent à vous. Quel chemin choisirez-vous ?",
 	        "inputs": {
 	            "Prendre le chemin de gauche": "chemin_gauche",
-	            "Prendre le chemin de droite": "chemin_droite",
-	            "Continuer tout droit": "chemin_droit"
+	            "Prendre le chemin de droite": "chemin_droite"
 	        }
 	    },
 	"danser_fleurs": {
@@ -327,9 +326,9 @@
         "name": "inviter_danser",
         "display_name": "Inviter d'autres à Danser",
         "type": "situation",
-        "text": "Vous invitez d'autres créatures à se joindre à vous dans la danse. Ensemble, vous formez un cercle joyeux, et la magie de la danse vous transporte dans un monde de couleurs et de rires. Vous réalisez que vous êtes devenu le roi des fleurs !",
+        "text": "Vous invitez d'autres créatures à se joindre à vous dans la danse. Ensemble, vous formez un cercle joyeux, et la magie de la danse vous transporte dans un monde de couleurs et de rires. Vous réalisez que vous êtes devenue la reine des fleurs !",
         "inputs": {
-            "Recommencer l'aventure": "fin_rire"
+            "Youpi!": "fin_rire"
         }
     },
     "danser_seul": {
@@ -360,20 +359,22 @@
         "text": "Vous vous approchez de la source des murmures et découvrez un groupe de lapins qui chantent des chansons anciennes. Ils vous invitent à les rejoindre, mais vous devez choisir : danser ou écouter.",
         "inputs": {
             "Danser avec les lapins": "fin_rire",
-            "Écouter les chansons": "fin_boussole"
+            "Écouter les chansons": "fin_chanson"
         }
     },
-    "champ_herbe": {
+    "retour_champ": {
         "id": "33",
-        "name": "champ_herbe",
+        "name": "retour_champ",
         "display_name": "Retour au Champ",
         "type": "situation",
         "text": "Vous retournez au champ, mais l'herbe semble plus dense et plus sombre. Vous sentez une présence étrange. Que ferez-vous ?",
         "inputs": {
             "Explorer davantage": "fin_herbe",
-            "Faire demi-tour": "fin"
+            "Faire demi-tour": "fin",
+	    "Suivre votre instinct": "suivre_instinct"
         }
     },
+
 "explorer_davantage": {
         "id": "35",
         "name": "explorer_davantage",
@@ -381,18 +382,123 @@
         "type": "situation",
         "text": "Vous décidez d'explorer davantage l'herbe. En vous enfonçant plus profondément, vous découvrez un ancien portail couvert de lianes. Il semble pulsé d'une énergie mystérieuse. Que ferez-vous ?",
         "inputs": {
-            "Entrer dans le portail": "fin_rituel",
-            "Faire demi-tour": "fin"
+            "Entrer dans le portail": "fin_portail",
+            "Faire demi-tour": "retour_champ",
         }
     },
-	
+
+"equipe_fleurs": {
+        "id": "37",
+        "name": "equipe_fleurs",
+        "display_name": "Équipe des Fleurs",
+        "type": "situation",
+        "text": "Vous choisissez l'équipe des fleurs. Elles vous expliquent les règles du jeu, mais vous réalisez rapidement qu'elles sont un peu trop compétitives. Que ferez-vous ?",
+        "inputs": {
+            "Essayer de gagner le jeu": "jouer_fleurs",
+            "Quitter le jeu": "retour_champ"
+        }
+    },
+    "jouer_fleurs": {
+        "id": "38",
+        "name": "jouer_fleurs",
+        "display_name": "Jouer avec les Fleurs",
+        "type": "situation",
+        "text": "Vous vous lancez dans le jeu avec les fleurs. Les règles sont étranges, et vous devez jongler avec des pétales tout en évitant les épines. Vous commencez à vous amuser, mais les fleurs deviennent de plus en plus exigeantes.",
+        "inputs": {
+            "Continuer à jouer": "fin_jeu_fleurs",
+            "Abandonner le jeu": "fin"
+        }
+    },
+    "interagir_lapins": {
+        "id": "39",
+        "name": "interagir_lapins",
+        "display_name": "Interagir avec les Lapins",
+        "type": "situation",
+        "text": "Vous décidez d'interagir avec les lapins. Ils semblent amicaux et curieux. Vous pouvez leur poser des questions ou leur proposer de jouer.",
+        "inputs": {
+            "Poser des questions": "fin_lapin_foudre",
+            "Proposer de jouer": "jouer_lapin"
+        }
+    },
+    "jouer_lapin": {
+        "id": "40",
+        "name": "jouer_lapin",
+        "display_name": "Jouer avec les Lapins",
+        "type": "situation",
+        "text": "Vous commencez à jouer avec les lapins. Ils vous enseignent un jeu de course à travers le champ. Vous vous amusez beaucoup, mais soudain, un orage éclate et des éclairs commencent à tomber.",
+        "inputs": {
+            "Chercher un abri": "fin_lapin_foudre",
+            "Continuer à jouer malgré l'orage": "fin"
+        }
+    },
+    "fin_oiseau": {
+        "id": "41",
+        "name": "fin_oiseau",
+        "display_name": "Fin de l'Oiseau",
+        "type": "fin",
+        "text": "Vous décidez d'écouter l'oiseau qui chante une mélodie envoûtante. En le suivant, vous découvrez un jardin secret rempli de merveilles. Vous réalisez que vous êtes devenu le gardien de ce jardin magique, où chaque jour est une nouvelle aventure.",
+        "inputs": {
+            "Recommencer l'aventure": "start"
+        }
+    },
+    "fin_lapin_foudre": {
+        "id": "42",
+        "name": "fin_lapin_foudre",
+        "display_name": "Fin du Lapin Foudre",
+        "type": "fin",
+        "text": "Soudain, l'orage éclate. Vous cherchez un abri, mais un éclair frappe un arbre à proximité. Les lapins, effrayés, s'enfuient, et vous vous retrouvez seul. Vous réalisez que parfois, même les jeux les plus amusants peuvent avoir des conséquences inattendues.",
+        "inputs": {
+            "Recommencer l'aventure": "start"
+        }
+    }
+}
+ "fin_piege": {
+        "id": "43",
+        "name": "fin_piege",
+        "display_name": "Fin du Piège",
+        "type": "fin",
+        "text": "Vous restez bloqué dans le piège. Vous vous retrouvez dans un monde où le temps s'écoule différemment. Vous réalisez que vous devrez résoudre beaucoup d'énigmes pour retrouver votre chemin. Peut-être que la prochaine fois, vous serez plus prudent !",
+        "inputs": {
+            "Recommencer l'aventure": "start"
+        }
+    },
+    "fin_chanson": {
+        "id": "44",
+        "name": "fin_chanson",
+        "display_name": "Fin de la Chanson",
+        "type": "fin",
+        "text": "Vous avez décidé d'écouter les chansons des lapins. Leur mélodie vous transporte dans un rêve doux et paisible. Vous vous endormez en écoutant leurs histoires, et lorsque vous vous réveillez, vous êtes dans un endroit magnifique, entouré de fleurs et de rires. Vous avez découvert la magie de la musique.",
+        "inputs": {
+            "Recommencer l'aventure": "start"
+        }
+    },
+    "fin_portail": {
+        "id": "45",
+        "name": "fin_portail",
+        "display_name": "Fin du Portail",
+        "type": "fin",
+        "text": "En entrant dans le portail, vous êtes transporté dans un monde fantastique rempli de créatures merveilleuses et de paysages enchanteurs. Vous réalisez que vous avez trouvé un nouveau foyer, un endroit où l'aventure ne s'arrête jamais. Vous êtes maintenant un explorateur de ce monde magique, pour l'éternité.",
+        "inputs": {
+            "Recommencer l'aventure": "start"
+        }
+    },
+    "fin_jeu_fleurs": {
+        "id": "46",
+        "name": "fin_jeu_fleurs",
+        "display_name": "Fin du Jeu des Fleurs",
+        "type": "fin",
+        "text": "Vous avez décidé de continuer à jouer avec les fleurs, et à votre grande surprise, vous gagnez le jeu ! Les fleurs vous couronnent comme leur champion et vous offrent un cadeau magique : la capacité de parler aux plantes. Vous réalisez que chaque jour peut être une nouvelle aventure remplie de magie.",
+        "inputs": {
+            "Recommencer l'aventure": "start"
+        }
+    }
 
         "fin": {
                 "id": "100",
                 "name": "fin",
                 "display_name": "Fin",
                 "type": "fin",
-                "text": "Vous avez décidé de faire demi-tour et de quitter cette aventure. En sortant, vous réalisez que vous avez oublié votre sandwich au fromage dans le champ. Vous vous retournez, mais l'herbe semble rire de vous. Peut-être que la prochaine fois, vous prendrez un en-cas plus léger !",
+                "text": "Vous décidez de faire demi-tour et de quitter cette aventure. En sortant, vous réalisez que vous avez oublié votre sandwich au fromage dans le champ. Vous vous retournez, mais l'herbe semble rire de vous. Peut-être que la prochaine fois, vous prendrez un en-cas plus léger !",
                 "inputs": {
                         "Recommencer l'aventure": "start"
                 }
@@ -402,7 +508,7 @@
                 "name": "fin_herbe",
                 "display_name": "Fin de l'Herbe",
                 "type": "fin",
-                "text": "Vous avez décidé de suivre le chemin caché et de découvrir le cœur de l'herbe. En arrivant, vous trouvez un énorme cœur en guimauve ! Vous réalisez que l'herbe n'était pas si terrible après tout. Vous vous asseyez et commencez à le manger, mais vous êtes bientôt attaqué par des lapins en colère qui veulent leur part. Qui aurait cru que l'herbe pouvait être si douce et si dangereuse ?",
+                "text": "Vous avez décidé de suivre le chemin et de découvrir le cœur de l'herbe. En arrivant, vous trouvez un énorme cœur en guimauve ! Vous réalisez que l'herbe n'était pas si terrible après tout. Vous vous asseyez et commencez à le manger, mais vous êtes bientôt attaqué par des lapins en colère qui veulent leur part. Qui aurait cru que l'herbe pouvait être si douce et si dangereuse ?",
                 "inputs": {
                         "Recommencer l'aventure": "start"
                 }
