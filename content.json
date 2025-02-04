@@ -43,7 +43,7 @@
                 "text": "En vous approchant des formes, vous réalisez qu'il s'agit de grandes figures ominieuses faites d'herbe. Elles semblent vous observer. Osez-vous leur parler ?",
                 "inputs": {
                         "Parler aux figures": "parler_figures",
-                        "Fuir": "champ_herbe",
+                        "Fuir": "fin",
                         "Faire demi-tour": "start"
                 }
         },
@@ -66,7 +66,7 @@
                 "text": "Vous suivez le chemin, qui vous mène à une clairière. Au centre, vous trouvez un ancien autel en pierre recouvert de mousse. Il dégage une énergie mystérieuse.",
                 "inputs": {
                         "Examiner l'autel": "examiner_autel",
-                        "Quitter la clairière": "champ_herbe"
+                        "Quitter la clairière": "continuer_marche"
                 }
         },
         "objet_bright": {
@@ -76,7 +76,8 @@
                 "type": "situation",
                 "text": "Vous vous approchez de l'objet brillant et découvrez qu'il s'agit d'une belle boussole ornée. Elle semble pointer dans une direction qui semble juste. Voulez-vous la prendre ?",
                 "inputs": {
-                        "Prendre la boussole": "prendre_boussole"
+                        "Prendre la boussole": "prendre_boussole",
+			"Continuer à marcher": "continuer_marche"
                 }
         },
         "parler_figures": {
@@ -87,7 +88,7 @@
                 "text": "Vous rassemblez votre courage et parlez aux figures. Elles répondent à l'unisson, vous avertissant des dangers qui vous attendent. Elles vous proposent un choix : prouver votre valeur en accomplissant une tâche ou ignorer leurs conseils.",
                 "inputs": {
                         "Accepter la tâche": "accepter_tache",
-                        "Les ignorer": "champ_herbe"
+                        "Les ignorer": "continuer_marche"
                 }
         },
         "sortir": {
@@ -98,7 +99,7 @@
                 "text": "Vous parvenez à sortir du trou, mais vous vous sentez désorienté. L'herbe autour de vous semble murmurer des secrets. Voulez-vous écouter attentivement ou vous éloigner ?",
                 "inputs": {
                         "Écouter attentivement": "ecouter_murmures",
-                        "S'éloigner": "champ_herbe"
+                        "S'éloigner": "continuer_marche"
                 }
         },
         "rester_immobile": {
@@ -120,7 +121,7 @@
                 "text": "En examinant l'autel, vous remarquez des gravures étranges racontant l'histoire d'un héros qui a autrefois traversé cette terre. Vous ressentez une connexion avec le passé. Voulez-vous effectuer un rituel ou quitter l'autel ?",
                 "inputs": {
                         "Effectuer un rituel": "effectuer_rituel",
-                        "Quitter l'autel": "champ_herbe"
+                        "Quitter l'autel": "continuer_marche"
                 }
         },
         "prendre_boussole": {
@@ -131,7 +132,7 @@
                 "text": "Vous prenez la boussole, et elle devient chaude dans votre main. Elle commence à briller, révélant un chemin caché à travers l'herbe. Voulez-vous suivre ce chemin ou retourner au champ ?",
                 "inputs": {
                         "Suivre le chemin caché": "chemin_cache",
-                        "Retourner au champ": "champ_herbe"
+                        "Retourner au champ": "retour_champ"
                 }
         },
         "accepter_tache": {
@@ -142,7 +143,7 @@
                 "text": "Les figures vous confient une tâche : retrouver le cœur de l'herbe, une source de pouvoir cachée. Elles vous avertissent que le chemin sera semé d'embûches. Êtes-vous prêt à commencer cette quête ?",
                 "inputs": {
                         "OUI, je suis prêt !": "debut_quete",
-                        "NON, je préfère partir": "champ_herbe"
+                        "NON, je préfère partir": "continuer_marche"
                 }
         },
         "ecouter_murmures": {
