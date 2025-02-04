@@ -156,6 +156,17 @@
                         "Les ignorer": "champ_herbe"
                 }
         },
+	"chemin_cache" : {
+		"id": "14",
+		"name": "chemin_cache",
+		"display_name": "Suivre le Chemin Caché",
+		"type": "situation",
+		"text": "Le chemin que vous suivez se perd dans les vagues de la mer d'herbe. Les formes vous appelent... Voulez vous plonger dans son immensité? ",
+		"inputs": {
+			"Suivre le Chemin":"fin_herbe",
+			"Enquêter sur les Formes":"enqueter_formes"
+		}
+	},
         "debut_quete": {
                 "id": "15",
                 "name": "debut_quete",
