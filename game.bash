@@ -22,12 +22,12 @@ say() {
 
 #get current content description from JSON
 get_content() {
-	jshon -C -Q -F $content_path$content_file_name -e $current_index
+	jshon -C -Q -F $content_path$content_file_name -e $current_index | fold -s -w 30
 }
 
 #get target index from input
 get_target() {
-	get_content | jshon -C -Q -e inputs -e "$1" -u |  fold -s -w 40
+	get_content | jshon -C -Q -e inputs -e "$1" -u |  cat
 }
 
 get_and_display_actions() {
