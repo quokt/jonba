@@ -31,7 +31,10 @@ get_target() {
 }
 
 get_actions() {
-	get_content | jshon -C -Q -e inputs | jshon -C -Q -k | cat
+	actions=$(get_content | jshon -C -Q -e inputs | jshon -C -Q -k)
+   	echo "$actions" | while read -r action; do
+        echo "- $action"
+    done
 }
 
 #read and display the json field passed as argument
@@ -48,9 +51,8 @@ while $game_on ; do
 	read_and_display text
 
 	echo "########################"
-	declare -A actions=`get_actions`
-	echo ${actions[@]}
-	read -p ">>>>>>>" input
+	get_actions
+	read -r -p ">>>>>>>" input
 	target=$(get_target "$input")
 
 	case $input in
