@@ -1,0 +1,286 @@
+{
+        "start": {
+                "id": "0",
+                "name": "start",
+                "display_name": "Un Nouveau Départ",
+                "type": "situation",
+                "text": "Vous vous trouvez au bord d'une vaste mer d'herbe, ondulant doucement dans la brise. Le soleil brille intensément, mais un sentiment de présage plane dans l'air. Osez-vous entrer dans l'herbe ?",
+                "inputs": {
+                        "Avancer": "champ_herbe",
+                        "Regarder autour": "regarder_autour",
+                        "Faire demi-tour": "fin"
+                }
+        },
+        "champ_herbe": {
+                "id": "1",
+                "name": "champ_herbe",
+                "display_name": "La Mer d'Herbe",
+                "type": "situation",
+                "text": "En entrant dans l'herbe, elle vous enveloppe comme un océan vert. Le bruit des feuilles qui bruissent remplit vos oreilles. Soudain, vous remarquez des formes étranges se déplaçant au loin. Que ferez-vous ?",
+                "inputs": {
+                        "Enquêter sur les formes": "enqueter_formes",
+                        "Continuer à marcher": "continuer_marche",
+                        "Faire demi-tour": "start"
+                }
+        },
+        "regarder_autour": {
+                "id": "2",
+                "name": "regarder_autour",
+                "display_name": "Regarder autour",
+                "type": "situation",
+                "text": "Vous prenez un moment pour observer votre environnement. L'herbe semble s'étendre à l'infini, et vous apercevez un chemin menant plus profondément dans le champ. Vous voyez également un éclat de quelque chose de brillant à proximité.",
+                "inputs": {
+                        "Suivre le chemin": "suivre_chemin",
+                        "Enquêter sur l'objet brillant": "objet_bright",
+                        "Faire demi-tour": "start"
+                }
+        },
+        "enqueter_formes": {
+                "id": "3",
+                "name": "enqueter_formes",
+                "display_name": "Enquêter sur les Formes",
+                "type": "situation",
+                "text": "En vous approchant des formes, vous réalisez qu'il s'agit de grandes figures ominieuses faites d'herbe. Elles semblent vous observer. Osez-vous leur parler ?",
+                "inputs": {
+                        "Parler aux figures": "parler_figures",
+                        "Fuir": "champ_herbe",
+                        "Faire demi-tour": "start"
+                }
+        },
+        "continuer_marche": {
+                "id": "4",
+                "name": "continuer_marche",
+                "display_name": "Continuer à Marcher",
+                "type": "situation",
+                "text": "Vous continuez à marcher plus profondément dans l'herbe. Les sons du monde s'estompent, et vous ressentez un étrange sentiment d'isolement. Soudain, le sol sous vous se déplace, et vous tombez dans un trou caché !",
+                "inputs": {
+                        "Sortir": "sortir",
+                        "Rester immobile": "rester_immobile"
+                }
+        },
+        "suivre_chemin": {
+                "id": "5",
+                "name": "suivre_chemin",
+                "display_name": "Suivre le Chemin",
+                "type": "situation",
+                "text": "Vous suivez le chemin, qui vous mène à une clairière. Au centre, vous trouvez un ancien autel en pierre recouvert de mousse. Il dégage une énergie mystérieuse.",
+                "inputs": {
+                        "Examiner l'autel": "examiner_autel",
+                        "Quitter la clairière": "champ_herbe"
+                }
+        },
+        "objet_bright": {
+                "id": "6",
+                "name": "objet_bright",
+                "display_name": "L'Objet Brillant",
+                "type": "situation",
+                "text": "Vous vous approchez de l'objet brillant et découvrez qu'il s'agit d'une belle boussole ornée. Elle semble pointer dans une direction qui semble juste. Voulez-vous la prendre ?",
+                "inputs": {
+                        "Prendre la boussole": "prendre_boussole"
+                }
+        },
+        "parler_figures": {
+                "id": "7",
+                "name": "parler_figures",
+                "display_name": "Parler aux Figures",
+                "type": "situation",
+                "text": "Vous rassemblez votre courage et parlez aux figures. Elles répondent à l'unisson, vous avertissant des dangers qui vous attendent. Elles vous proposent un choix : prouver votre valeur en accomplissant une tâche ou ignorer leurs conseils.",
+                "inputs": {
+                        "Accepter la tâche": "accepter_tache",
+                        "Les ignorer": "champ_herbe"
+                }
+        },
+        "sortir": {
+                "id": "8",
+                "name": "sortir",
+                "display_name": "Sortir du Trou",
+                "type": "situation",
+                "text": "Vous parvenez à sortir du trou, mais vous vous sentez désorienté. L'herbe autour de vous semble murmurer des secrets. Voulez-vous écouter attentivement ou vous éloigner ?",
+                "inputs": {
+                        "Écouter attentivement": "ecouter_murmures",
+                        "S'éloigner": "champ_herbe"
+                }
+        },
+        "rester_immobile": {
+                "id": "9",
+                "name": "rester_immobile",
+                "display_name": "Rester Immobile",
+                "type": "situation",
+                "text": "Vous décidez de rester immobile, espérant que le sol se stabilisera. Après un moment, le trou commence à se remplir d'herbe, et vous vous retrouvez piégé ! Que ferez-vous ?",
+                "inputs": {
+                        "Tenter de vous échapper": "sortir",
+                        "Attendre de l'aide": "fin"
+                }
+        },
+        "examiner_autel": {
+                "id": "10",
+                "name": "examiner_autel",
+                "display_name": "Examiner l'Autel",
+                "type": "situation",
+                "text": "En examinant l'autel, vous remarquez des gravures étranges racontant l'histoire d'un héros qui a autrefois traversé cette terre. Vous ressentez une connexion avec le passé. Voulez-vous effectuer un rituel ou quitter l'autel ?",
+                "inputs": {
+                        "Effectuer un rituel": "effectuer_rituel",
+                        "Quitter l'autel": "champ_herbe"
+                }
+        },
+        "prendre_boussole": {
+                "id": "11",
+                "name": "prendre_boussole",
+                "display_name": "Prendre la Boussole",
+                "type": "situation",
+                "text": "Vous prenez la boussole, et elle devient chaude dans votre main. Elle commence à briller, révélant un chemin caché à travers l'herbe. Voulez-vous suivre ce chemin ou retourner au champ ?",
+                "inputs": {
+                        "Suivre le chemin caché": "chemin_cache",
+                        "Retourner au champ": "champ_herbe"
+                }
+        },
+        "accepter_tache": {
+                "id": "12",
+                "name": "accepter_tache",
+                "display_name": "Accepter la Tâche",
+                "type": "situation",
+                "text": "Les figures vous confient une tâche : retrouver le cœur de l'herbe, une source de pouvoir cachée. Elles vous avertissent que le chemin sera semé d'embûches. Êtes-vous prêt à commencer cette quête ?",
+                "inputs": {
+                        "OUI, je suis prêt !": "debut_quete",
+                        "NON, je préfère partir": "champ_herbe"
+                }
+        },
+        "ecouter_murmures": {
+                "id": "13",
+                "name": "ecouter_murmures",
+                "display_name": "Écouter les Murmures",
+                "type": "situation",
+                "text": "Vous écoutez attentivement les murmures, et ils révèlent des secrets sur l'herbe et ses dangers cachés. Vous gagnez un aperçu des chemins à venir. Voulez-vous utiliser cette connaissance pour naviguer ou l'ignorer ?",
+                "inputs": {
+                        "Utiliser la connaissance": "naviguer_connaissance",
+                        "Les ignorer": "champ_herbe"
+                }
+        },
+        "debut_quete": {
+                "id": "15",
+                "name": "debut_quete",
+                "display_name": "Début de la Quête",
+                "type": "situation",
+                "text": "Vous commencez votre quête pour retrouver le cœur de l'herbe. Les figures vous donnent une carte ancienne qui semble indiquer le chemin. Soudain, un vent fort se lève, et la carte s'envole ! Que ferez-vous ?",
+                "inputs": {
+                        "Courir après la carte": "courir_apres_carte",
+                        "Suivre votre instinct": "suivre_instinct"
+                }
+        },
+        "courir_apres_carte": {
+                "id": "16",
+                "name": "courir_apres_carte",
+                "display_name": "Courir après la Carte",
+                "type": "situation",
+                "text": "Vous courez après la carte, mais elle s'envole plus haut dans les airs. Vous réalisez qu'elle est guidée par un oiseau étrange. Voulez-vous essayer de l'attraper ou l'observer ?",
+                "inputs": {
+                        "Tenter d'attraper l'oiseau": "attraper_oiseau",
+                        "Observer l'oiseau": "observer_oiseau"
+                }
+        },
+        "suivre_instinct": {
+                "id": "17",
+                "name": "suivre_instinct",
+                "display_name": "Suivre votre Instinct",
+                "type": "situation",
+                "text": "Vous décidez de suivre votre instinct. Après quelques minutes, vous tombez sur un groupe de créatures étranges qui semblent jouer à un jeu. Que ferez-vous ?",
+                "inputs": {
+                        "Les rejoindre": "rejoindre_creatures",
+                        "Les ignorer": "champ_herbe"
+                }
+        },
+        "attraper_oiseau": {
+                "id": "18",
+                "name": "attraper_oiseau",
+                "display_name": "Attraper l'Oiseau",
+                "type": "situation",
+                "text": "Vous tentez d'attraper l'oiseau, mais il s'envole juste au-dessus de vous. En tombant, vous atterrissez sur un coussin de fleurs. Les fleurs commencent à chanter et vous entraînent dans une danse. Que ferez-vous ?",
+                "inputs": {
+                        "Danser avec les fleurs": "danser_fleurs",
+                        "Essayer de vous relever": "champ_herbe"
+                }
+        },
+        "observer_oiseau": {
+                "id": "19",
+                "name": "observer_oiseau",
+                "display_name": "Observer l'Oiseau",
+                "type": "situation",
+                "text": "Vous décidez d'observer l'oiseau. Il se perche sur une branche et commence à chanter une mélodie envoûtante. Vous êtes tellement captivé que vous ne remarquez pas un groupe de lapins qui s'approche. Que ferez-vous ?",
+                "inputs": {
+                        "Interagir avec les lapins": "interagir_lapins",
+                        "Continuer à écouter l'oiseau": "fin_rire"
+                }
+        },
+        "rejoindre_creatures": {
+                "id": "20",
+                "name": "rejoindre_creatures",
+                "display_name": "Rejoindre les Créatures",
+                "type": "situation",
+                "text": "Vous rejoignez les créatures, qui jouent à un jeu de société géant. Elles vous invitent à participer, mais vous devez choisir une équipe. Quelle équipe choisissez-vous ?",
+                "inputs": {
+                        "Équipe des lapins": "equipe_lapins",
+                        "Équipe des fleurs": "equipe_fleurs"
+                }
+        },
+        "equipe_lapins": {
+                "id": "21",
+                "name": "equipe_lapins",
+                "display_name": "Équipe des Lapins",
+                "type": "situation",
+                "text": "Vous choisissez l'équipe des lapins. Ils vous expliquent les règles, mais vous réalisez rapidement qu'ils trichent. Que ferez-vous ?",
+                "inputs": {
+                        "Les dénoncer": "fin_boussole",
+                        "Jouer le jeu": "fin_herbe"
+                }
+        },
+        "fin": {
+                "id": "100",
+                "name": "fin",
+                "display_name": "Fin",
+                "type": "fin",
+                "text": "Vous avez décidé de faire demi-tour et de quitter cette aventure. En sortant, vous réalisez que vous avez oublié votre sandwich au fromage dans le champ. Vous vous retournez, mais l'herbe semble rire de vous. Peut-être que la prochaine fois, vous prendrez un en-cas plus léger !",
+                "inputs": {
+                        "Recommencer l'aventure": "start"
+                }
+        },
+        "fin_herbe": {
+                "id": "101",
+                "name": "fin_herbe",
+                "display_name": "Fin de l'Herbe",
+                "type": "fin",
+                "text": "Vous avez décidé de suivre le chemin caché et de découvrir le cœur de l'herbe. En arrivant, vous trouvez un énorme cœur en guimauve ! Vous réalisez que l'herbe n'était pas si terrible après tout. Vous vous asseyez et commencez à le manger, mais vous êtes bientôt attaqué par des lapins en colère qui veulent leur part. Qui aurait cru que l'herbe pouvait être si douce et si dangereuse ?",
+                "inputs": {
+                        "Recommencer l'aventure": "start"
+                }
+        },
+        "fin_rire": {
+                "id": "102",
+                "name": "fin_rire",
+                "display_name": "Fin du Rire",
+                "type": "fin",
+                "text": "Vous avez décidé de danser avec les fleurs. Elles vous entraînent dans une danse folle, et vous vous retrouvez à chanter des chansons sur les légumes. Les figures d'herbe se mettent à rire si fort qu'elles se transforment en nuages de paillettes. Vous réalisez que vous êtes devenu le roi des fleurs et que vous devez maintenant gouverner un royaume de légumes dansants. Qui aurait cru que l'aventure serait si... colorée ?",
+                "inputs": {
+                        "Recommencer l'aventure": "start"
+                }
+        },
+        "fin_rituel": {
+                "id": "103",
+                "name": "fin_rituel",
+                "display_name": "Fin du Rituel",
+                "type": "fin",
+                "text": "Vous avez décidé d'effectuer un rituel à l'autel. En chantant des incantations étranges, vous invoquez un esprit de l'herbe qui apparaît sous la forme d'un chat géant. Le chat vous regarde et dit : 'Tu as réveillé mon sommeil, maintenant je vais te donner un conseil : ne jamais sous-estimer le pouvoir d'une sieste !' Puis il s'endort à nouveau. Vous vous demandez si vous avez vraiment besoin de cette aventure après tout.",
+                "inputs": {
+                        "Recommencer l'aventure": "start"
+                }
+        },
+        "fin_boussole": {
+                "id": "104",
+                "name": "fin_boussole",
+                "display_name": "Fin de la Boussole",
+                "type": "fin",
+                "text": "Vous avez pris la boussole et décidé de suivre le chemin qu'elle indique. Après une longue marche, vous arrivez à un panneau indiquant 'Retour à la case départ'. Vous réalisez que la boussole était en fait un gadget de jeu de société. Vous vous asseyez, sortez un jeu de société et commencez à jouer avec les figures d'herbe. Qui aurait cru que l'aventure se terminerait par une soirée jeux ?",
+                "inputs": {
+                        "Recommencer l'aventure": "start"
+                }
+        }
+}
