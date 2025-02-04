@@ -450,8 +450,7 @@
         "inputs": {
             "Recommencer l'aventure": "start"
         }
-    }
-}
+    },
  "fin_piege": {
         "id": "43",
         "name": "fin_piege",
