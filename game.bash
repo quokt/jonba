@@ -27,10 +27,10 @@ get_content() {
 
 #get target index from input
 get_target() {
-	get_content | jshon -C -Q -e inputs -e "$1" -u |  cat
+	get_content | jshon -C -Q -e inputs -e "$1" -u |  fold -s -w 40
 }
 
-get_actions() {
+get_and_display_actions() {
 	actions=$(get_content | jshon -C -Q -e inputs | jshon -C -Q -k)
    	echo "$actions" | while read -r action; do
         echo "- $action"
@@ -51,7 +51,7 @@ while $game_on ; do
 	read_and_display text
 
 	echo "########################"
-	get_actions
+	get_and_display_actions
 	read -r -p ">>>>>>>" input
 	target=$(get_target "$input")
 
